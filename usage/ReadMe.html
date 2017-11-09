@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>框架说明</title>
+</head>
+<body background="background.jpg">
+<h2>目标方向</h2>
+<blockquote>
+    业务下沉，重复工作，机器完成</br>
+    人工聚焦探索、感知、体验性测试</br>
+</blockquote>
+<h2>脚本选型</h2>
+<blockquote>
+    1.语法简洁，易于学习，便于推广</br>
+    2.释放精力，聚焦设计</br>
+    2.生态完善</br>
+    3.前景明朗</br>
+</blockquote>
+<h2>框架说明：</h2>
+<blockquote>
+    <p>
+    <h3>整体拓扑图：</h3>
+    <img src="topology.jpg" width="512" height="512">
+    </p>
+    <p>
+    <h3>package依赖关系图：</h3>
+    <img src="packageDepend.jpg" width="512" height="512">
+    </p>
+    <table border="1">
+        <tr>
+            <th>包名</th>
+            <th>含义</th>
+        </tr>
+        <tr>
+            <td>common</td>
+            <td>
+                按照分层原则进行的工具类封装</br>
+                1.service: case执行facade</br>
+                2.module: 基础封装类</br>
+                2.integretion: 系统集成封装类</br>
+            </td>
+        </tr>
+        <tr>
+            <td>test_case</td>
+            <td>单独的测试用例</td>
+        </tr>
+        <tr>
+            <td>test_suite</td>
+            <td>按照不同维度进行组装的case集</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>测试数据来源</td>
+        </tr>
+        <tr>
+            <td>report</td>
+            <td>脚本执行结果的图文报表</td>
+        </tr>
+        <tr>
+            <td>log</td>
+            <td>脚本执行过程中的埋点数据</td>
+        </tr>
+    </table>
+</blockquote>
+<h2>使用手册：</h2>
+<blockquote>
+    <h3>脚本更新：</h3>
+    第一步：编辑case数据</br>
+    第二步：test_case内case逻辑填充</br>
+    第三步：将新增case集成到test_suite内</br>
+    优化步骤：case中重复的部分，抽象到common.biz内</br>
+
+    <h3>执行过程：</h3>
+    第一步：通过<a href="xh.build.hualala.com">Jenkins</a> 一键触发</br>
+    第二步：通过超链接或邮件查看测试报告</br>
+</blockquote>
+<h2>文档链接：</h2>
+暂无
+<h2>Backlog：</h2>
+一期：框架编写 & 黄金流程和主场景case</br>
+二期：待定</br>
+三期：待定</br>
+
+</body>
+</html>

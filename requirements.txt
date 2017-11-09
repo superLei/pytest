@@ -1,0 +1,5 @@
+TestLink-API-Python-client
+requests
+xlrd
+pytest
+pytest-allure-adaptor

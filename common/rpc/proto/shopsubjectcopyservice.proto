@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_package = "com.hualala.app.shop.grpc";
+option java_outer_classname = "ShopSubjectCopyData";
+import "commons.proto";
+import "beancommons.proto";
+
+message ShopSubjectCopyRequest {
+   // 源店铺ID
+   int64 sourceShopID=2;
+   // 目标店铺ID
+   int64 targetShopID=3;
+   // 源集团ID
+   int64 sourceGroupID=4;
+   // 目标集团ID
+   int64 targetGroupID=5;
+   // 请求公共字段
+   RequestHeader header=1;
+}
+message ShopSubjectCopyResponse {
+   // 响应公共字段
+   ResultHeader result=1;
+}
+//店铺结账方式复制
+service ShopSubjectCopyService{
+    //店铺结账方式复制
+    rpc shopSubjectCopy(ShopSubjectCopyRequest) returns (ShopSubjectCopyResponse) {}
+}

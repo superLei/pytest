@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "com.hualala.app.shop.grpc";
+option java_outer_classname = "Common";
+message RequestHeader {
+   string traceID=1;
+}
+message ResultHeader {
+   string traceID=1;
+   string code=2;
+   string message=3;
+}
+message RequestPageHeader {
+   int32 pageNo=1;
+   int32 pageSize=2;
+}
+message ResultPageHeader {
+   int32 pageNo=1;
+   int32 pageSize=2;
+   int32 pageCount=3;
+   int32 totalSize=4;
+}
